@@ -2,17 +2,26 @@ import './App.css'
 import { ThemeProvider, Typography } from '@mui/material'
 import theme from './theme/theme'
 import './config/initI18n'
-import { useTranslation } from 'react-i18next'
+import Navbar from './components/Navbar'
+import DataProvider from './context/DataProvider'
+import { useContext } from 'react'
+import DataContext from './context/DataContext'
 
 function App() {
-  const { t } = useTranslation()
   return (
     <ThemeProvider theme={theme}>
-      <div className='App'>
-        <Typography fontSize={30}>{t('Bosta')}</Typography>
-      </div>
+      <DataProvider>
+        <Navbar />
+        <Coo />
+      </DataProvider>
     </ThemeProvider>
   )
 }
 
 export default App
+
+const Coo = () => {
+  const { trackingNumber } = useContext(DataContext)
+  console.log('s', trackingNumber)
+  return <Typography>aaa</Typography>
+}
