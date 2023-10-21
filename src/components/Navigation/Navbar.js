@@ -14,7 +14,7 @@ import {
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useTranslation } from 'react-i18next'
-import { ArabicLogo, EnglishLogo } from '../assets/icons/Logo'
+import { ArabicLogo, EnglishLogo } from '../../assets/icons/Logo'
 import TrackShipmentMenu from './TrackShipmentMenu'
 
 const drawerWidth = 240
@@ -58,7 +58,7 @@ export default function DrawerAppBar(props) {
         }}
         onClick={changeLanguage}
       >
-        {i18n.language === 'en' ? 'عربي' : 'Eng'}
+        {lang === 'en' ? 'عربي' : 'Eng'}
       </Button>
       <Divider />
       <Stack>
@@ -92,21 +92,14 @@ export default function DrawerAppBar(props) {
       >
         <Toolbar
           sx={{
-            flexDirection: i18n.language === 'en' ? 'row' : 'row-reverse',
             justifyContent: 'space-between',
           }}
         >
-          <Stack
-            direction={'row'}
-            flexDirection={lang === 'en' ? 'row' : 'row-reverse'}
-            alignItems='center'
-            gap={12}
-          >
+          <Stack direction={'row'} alignItems='center' gap={12}>
             {lang === 'en' ? <EnglishLogo /> : <ArabicLogo />}
             <Stack
               gap={3}
               direction='row'
-              flexDirection={lang === 'en' ? 'row' : 'row-reverse'}
               sx={{ display: { xs: 'none', lg: 'flex' } }}
             >
               {navItems.map((item) => (
@@ -129,16 +122,11 @@ export default function DrawerAppBar(props) {
             </Stack>
           </Stack>
 
-          <Stack
-            direction={'row'}
-            flexDirection={lang === 'en' ? 'row' : 'row-reverse'}
-            alignItems='center'
-          >
+          <Stack direction={'row'} alignItems='center'>
             <TrackShipmentMenu />
             <Stack
               direction={'row'}
               sx={{ display: { xs: 'none', lg: 'flex' } }}
-              flexDirection={lang === 'en' ? 'row' : 'row-reverse'}
             >
               <Button
                 color='secondary'

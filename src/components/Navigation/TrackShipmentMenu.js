@@ -4,10 +4,10 @@ import Menu from '@mui/material/Menu'
 import { InputAdornment, OutlinedInput, Stack, Typography } from '@mui/material'
 import { Search } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
-import DataContext from '../context/DataContext'
+import DataContext from '../../context/DataContext'
 
 const TrackShipmentMenu = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
 
@@ -25,6 +25,7 @@ const TrackShipmentMenu = () => {
   const onSubmit = useCallback(() => {
     if (!trackingNumberInput) return
     setTrackingNumber(trackingNumberInput)
+    handleClose()
   }, [setTrackingNumber, trackingNumberInput])
 
   return (
@@ -37,9 +38,9 @@ const TrackShipmentMenu = () => {
         onClick={handleClick}
         sx={{
           textTransform: 'none',
-          fontSize: '18px',
+          fontSize: { md: '18px', sm: '16px', xs: '14px' },
           fontWeight: 800,
-          padding: '21px 28px',
+          padding: { md: '21px 28px', xs: '15px 10px' },
           marginX: '15px',
         }}
       >
@@ -53,13 +54,14 @@ const TrackShipmentMenu = () => {
         MenuListProps={{
           'aria-labelledby': 'track-shipment-btn',
         }}
+        dir={i18n.language === 'en' ? 'ltr' : 'rtl'}
       >
         <Stack padding={'25px'} spacing={2}>
-          <Typography>Track Your Shipment</Typography>
+          <Typography>{t('Track Your Shipment')}</Typography>
           <OutlinedInput
             fullWidth
             variant='outlined'
-            placeholder='Search'
+            placeholder={t('Search')}
             value={trackingNumberInput}
             onChange={(e) => setTrackingNumberInput(e.target.value)}
             endAdornment={

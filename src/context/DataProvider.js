@@ -18,7 +18,9 @@ const DataProvider = ({ children }) => {
   }
 
   return (
-    <DataContext.Provider value={{ trackingNumber: state, setTrackingNumber }}>
+    <DataContext.Provider
+      value={{ trackingNumber: state.trackingNumber, setTrackingNumber }}
+    >
       {children}
     </DataContext.Provider>
   )
