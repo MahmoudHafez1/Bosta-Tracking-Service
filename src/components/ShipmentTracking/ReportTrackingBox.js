@@ -13,7 +13,7 @@ const ReportTrackingBox = () => {
       minWidth='310px'
     >
       <img src={queryImg} alt='tracking-query' width={'120px'} />
-      <Stack justifyContent={'space-around'}>
+      <Stack justifyContent={'space-around'} spacing={1}>
         <Typography variant='body2'>
           {t('Is there a problem with your shipment ?!')}
         </Typography>

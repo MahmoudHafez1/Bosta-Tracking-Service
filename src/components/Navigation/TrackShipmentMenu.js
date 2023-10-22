@@ -25,7 +25,9 @@ const TrackShipmentMenu = () => {
   const onSubmit = useCallback(() => {
     if (!trackingNumberInput) return
     setTrackingNumber(trackingNumberInput)
-    handleClose()
+    setTimeout(() => {
+      handleClose()
+    }, 10)
   }, [setTrackingNumber, trackingNumberInput])
 
   return (
@@ -64,6 +66,11 @@ const TrackShipmentMenu = () => {
             placeholder={t('Search')}
             value={trackingNumberInput}
             onChange={(e) => setTrackingNumberInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                onSubmit()
+              }
+            }}
             endAdornment={
               <InputAdornment position='end'>
                 <Button variant='contained' color='primary' onClick={onSubmit}>
