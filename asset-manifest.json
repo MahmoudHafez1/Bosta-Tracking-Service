@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.c76e2384.js",
-    "static/js/787.95a4e135.chunk.js": "/static/js/787.95a4e135.chunk.js",
-    "static/media/query.png": "/static/media/query.62dc75110c78dc6f05d1.png",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.c76e2384.js.map": "/static/js/main.c76e2384.js.map",
-    "787.95a4e135.chunk.js.map": "/static/js/787.95a4e135.chunk.js.map"
+    "main.css": "/Bosta-Tracking-Service/static/css/main.073c9b0a.css",
+    "main.js": "/Bosta-Tracking-Service/static/js/main.479a5ddd.js",
+    "static/js/787.95a4e135.chunk.js": "/Bosta-Tracking-Service/static/js/787.95a4e135.chunk.js",
+    "static/media/query.png": "/Bosta-Tracking-Service/static/media/query.62dc75110c78dc6f05d1.png",
+    "index.html": "/Bosta-Tracking-Service/index.html",
+    "main.073c9b0a.css.map": "/Bosta-Tracking-Service/static/css/main.073c9b0a.css.map",
+    "main.479a5ddd.js.map": "/Bosta-Tracking-Service/static/js/main.479a5ddd.js.map",
+    "787.95a4e135.chunk.js.map": "/Bosta-Tracking-Service/static/js/787.95a4e135.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.c76e2384.js"
+    "static/js/main.479a5ddd.js"
   ]
 }
